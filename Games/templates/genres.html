@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for genre in genres %}
+        <div>
+        <a class="btn btn-default" href="{% url 'genre_edit' pk=genre.pk %}">
+                <span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="btn btn-default" href="{% url 'genre_delete' pk=genre.pk %}">
+                <span class="glyphicon glyphicon-trash"></span></a>
+            <h1><a href="{% url 'genre_detail' pk=genre.pk %}">{{ genre.name }}</a></h1>
+        </div>
+    {% endfor %}
+{% endblock %}

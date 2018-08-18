@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="game">
+        <h1>Name: {{ game.name }}</h1>
+        <p>By: {{ game.studio.name }}</p>
+        <p>Genre: {{ game.genre.name }}</p>
+    </div>
+{% endblock %}
